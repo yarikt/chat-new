@@ -265,42 +265,43 @@ input[type="text"] {
 
    @keyframes glow {
     from {
-      text-shadow: 0 0 10px #0000ff80, 0 0 20px #0000ff80, 0 0 30px #0000ff80, 0 0 40px #0000ff80, 0 0 50px #0000ff80, 0 0 60px #0000ff80, 0 0 70px #0000ff80;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF, 0 0 50px #0000FF, 0 0 60px #0000FF, 0 0 70px #0000FF, 0 0 80px #0000FF;
-    }
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+			}
+
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+			}
   }
 
 @-webkit-keyframes glow {
   from {
-      text-shadow: 0 0 10px #0000ff80, 0 0 20px #0000ff80, 0 0 30px #0000ff80, 0 0 40px #0000ff80, 0 0 50px #0000ff80, 0 0 60px #0000ff80, 0 0 70px #0000ff80;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF, 0 0 50px #0000FF, 0 0 60px #0000FF, 0 0 70px #0000FF, 0 0 80px #0000FF;
-    }
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+			}
+
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+			}
 }
 
 @-moz-keyframes glow {
   from {
-      text-shadow: 0 0 10px #0000ff80, 0 0 20px #0000ff80, 0 0 30px #0000ff80, 0 0 40px #0000ff80, 0 0 50px #0000ff80, 0 0 60px #0000ff80, 0 0 70px #0000ff80;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF, 0 0 50px #0000FF, 0 0 60px #0000FF, 0 0 70px #0000FF, 0 0 80px #0000FF;
-    }
+     from {
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+			}
+
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+			}
 }
 
 @-o-keyframes glow {
-  from {
-      text-shadow: 0 0 10px #0000ff80, 0 0 20px #0000ff80, 0 0 30px #0000ff80, 0 0 40px #0000ff80, 0 0 50px #0000ff80, 0 0 60px #0000ff80, 0 0 70px #0000ff80;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF, 0 0 50px #0000FF, 0 0 60px #0000FF, 0 0 70px #0000FF, 0 0 80px #0000FF;
-    }
+ from {
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+			}
+
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+			}
 }
 
 @media (max-width: 700px) {
