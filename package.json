@@ -1,0 +1,33 @@
+{
+  "name": "cs-cp",
+  "version": "1.0.0",
+  "description": "RealTimeChatApplication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "pkg": {
+    "scripts": "**/*.js",
+    "assets": "public",
+    "outputPath": "dist"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "country-code-lookup": "^0.0.19",
+    "cryptr": "^6.0.2",
+    "express": "^4.17.1",
+    "geoip-lite": "^1.4.2",
+    "iplocation": "^7.2.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.13",
+    "public-ip": "^4.0.4",
+    "randomcolor": "^0.6.2",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

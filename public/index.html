@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./css/style.css" />
+	
+	<title>Peterengland</title>
+</head>
+
+<body>
+
+	<style type="text/css">
+		
+		@font-face {font-family: "Light LED Display-7";
+		  src: url("Light LED Display-7/cbf36057f4bbe811aa9b0672f787f8c5.eot"); /* IE9*/
+		  src: url("Light LED Display-7/cbf36057f4bbe811aa9b0672f787f8c5.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		  url("Light LED Display-7/cbf36057f4bbe811aa9b0672f787f8c5.woff2") format("woff2"), /* chrome、firefox */
+		  url("Light LED Display-7/cbf36057f4bbe811aa9b0672f787f8c5.woff") format("woff"), /* chrome、firefox */
+		  url("Light LED Display-7/cbf36057f4bbe811aa9b0672f787f8c5.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+		  url("Light LED Display-7/cbf36057f4bbe811aa9b0672f787f8c5.svg#Light LED Display-7") format("svg"); /* iOS 4.1- */
+		}
+
+
+		*{
+			color: #fff !important;
+			animation: glow 1s ease-in-out infinite alternate !important;
+			font-family: "Light LED Display-7" !important;
+    	}
+
+		input[type="text"]{
+			color: white !important;
+			background: transparent !important;
+			border: 1px solid #808080 !important;
+		}
+		.join-main{
+			background: transparent !important;
+		}
+
+		@keyframes NO_glow {
+			from {
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+			}
+
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+			}
+		}
+	</style>
+
+
+	<div class="join-container">
+		<header class="join-header" style="border-style: solid;border-color: white;">
+			<h1 style="color:white"><i class="fas fa-comment"></i> <span>Peterengland</span></h1>
+		</header>
+		<main class="join-main">
+			<form id="update" action="/validate" method="POST">
+				<div class="form-control">
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" required autofocus />
+				</div>
+				<div class="form-control">
+					<label for="room">Room</label>
+					<input type="text" name="room" id=room>
+				</div>
+				<button type="submit" class="btn">Join Chat</button>
+			</form>
+		</main>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+		integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+		crossorigin="anonymous"></script>
+
+
+	<script>
+		window.onload = () => {
+			const { room } = Qs.parse(location.search, {
+				ignoreQueryPrefix: true,
+			});
+
+			if (!room) {
+				document.getElementById('room').value = Math.random().toString(36).substring(2, 5) + Math.random().toString(36).substring(2, 5);
+			} else {
+				document.getElementById('room').value = room;
+			}
+
+			const username = localStorage.getItem('username');
+
+			if (username) {
+				document.getElementById('username').value = username;
+			}
+
+			document.getElementById('update').onsubmit = (e) => {
+				localStorage.setItem('username', document.getElementById('username').value);
+				document.getElementById('update').id = '';
+			}
+		}
+	</script>
+</body>
+
+</html>
